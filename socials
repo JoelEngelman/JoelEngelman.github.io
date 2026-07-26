@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Social Tab Example</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background: #f4f4f4;
+    }
+
+    /* Social Tab Container */
+    .social-tab {
+        position: fixed;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        background: #333;
+        border-radius: 0 8px 8px 0;
+        overflow: hidden;
+        box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    }
+
+    /* Social Links */
+    .social-tab a {
+        display: block;
+        padding: 12px;
+        text-align: center;
+        color: white;
+        text-decoration: none;
+        transition: background 0.3s;
+    }
+
+    /* Hover Effect */
+    .social-tab a:hover {
+        background: #555;
+    }
+
+    /* Individual Colors */
+    .facebook { background: #3b5998; }
+    .twitter { background: #1da1f2; }
+    .instagram { background: #e4405f; }
+    .linkedin { background: #0077b5; }
+</style>
+</head>
+<body>
+
+<!-- Social Tab -->
+<div class="social-tab">
+    <a href="https://facebook.com" class="facebook" target="_blank">F</a>
+    <a href="https://twitter.com" class="twitter" target="_blank">T</a>
+    <a href="https://instagram.com" class="instagram" target="_blank">I</a>
+    <a href="https://linkedin.com" class="linkedin" target="_blank">L</a>
+</div>
+
+</body>
+</html>
