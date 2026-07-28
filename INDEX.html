@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About | Joel Engelman</title>
+
+<style>
+
+*{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+
+}
+
+body{
+
+background:#080b16;
+
+color:white;
+
+overflow-x:hidden;
+
+}
+
+header{
+
+position:fixed;
+
+top:0;
+
+width:100%;
+
+padding:18px 8%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+background:rgba(8,11,22,.9);
+
+backdrop-filter:blur(20px);
+
+z-index:9999;
+
+}
+
+.logo img{
+
+height:95px;
+
+}
+
+nav{
+
+display:flex;
+
+gap:45px;
+
+}
+
+nav a{
+
+color:white;
+
+text-decoration:none;
+
+font-weight:bold;
+
+font-size:18px;
+
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#8b5cf6;
+
+}
+
+.hero{
+
+margin-top:120px;
+
+text-align:center;
+
+padding:90px 20px;
+
+}
+
+.hero h1{
+
+font-size:72px;
+
+margin-bottom:20px;
+
+}
+
+.hero p{
+
+font-size:24px;
+
+color:#cbd5e1;
+
+}
+
+.container{
+
+width:90%;
+
+max-width:1200px;
+
+margin:auto;
+
+}
+
+.story{
+
+padding:90px 0;
+
+}
+
+.story h2{
+
+font-size:48px;
+
+margin-bottom:30px;
+
+color:#8b5cf6;
+
+}
+
+.story p{
+
+font-size:20px;
+
+line-height:2;
+
+margin-bottom:25px;
+
+color:#d1d5db;
+
+}
+
+.cards{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+gap:35px;
+
+padding-bottom:80px;
+
+}
+
+.card{
+
+background:#121a2d;
+
+padding:40px;
+
+border-radius:22px;
+
+transition:.35s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 20px 60px rgba(139,92,246,.25);
+
+}
+
+.card h3{
+
+font-size:32px;
+
+margin-bottom:18px;
+
+}
+
+.card p{
+
+font-size:18px;
+
+line-height:1.8;
+
+color:#cbd5e1;
+
+}
+/* ---------------- LATEST RELEASE ---------------- */
+
+.release{
+
+width:90%;
+max-width:1200px;
+
+margin:auto;
+
+padding:100px 0;
+
+display:grid;
+
+grid-template-columns:1.2fr .8fr;
+
+gap:60px;
+
+align-items:center;
+
+}
+
+.release-text h2{
+
+font-size:58px;
+
+margin-bottom:25px;
+
+}
+
+.release-text p{
+
+font-size:20px;
+
+line-height:1.9;
+
+color:#cbd5e1;
+
+margin-bottom:30px;
+
+}
+
+.release-card{
+
+background:#121a2d;
+
+padding:40px;
+
+border-radius:25px;
+
+border:1px solid rgba(255,255,255,.05);
+
+transition:.35s;
+
+}
+
+.release-card:hover{
+
+transform:translateY(-12px);
+
+box-shadow:0 20px 60px rgba(139,92,246,.30);
+
+}
+
+.release-card img{
+
+width:100%;
+
+border-radius:18px;
+
+margin-bottom:25px;
+
+}
+
+.release-card h3{
+
+font-size:34px;
+
+margin-bottom:15px;
+
+}
+
+.release-card p{
+
+color:#cbd5e1;
+
+line-height:1.8;
+
+}
+
+/* ---------------- SOCIALS ---------------- */
+
+.socials{
+
+padding:110px 0;
+
+background:#0c1324;
+
+}
+
+.socials h2{
+
+text-align:center;
+
+font-size:52px;
+
+margin-bottom:25px;
+
+}
+
+.socials p{
+
+text-align:center;
+
+color:#cbd5e1;
+
+font-size:20px;
+
+margin-bottom:45px;
+
+}
+
+.social-grid{
+
+display:flex;
+
+justify-content:center;
+
+gap:25px;
+
+flex-wrap:wrap;
+
+}
+
+.social{
+
+padding:18px 34px;
+
+border-radius:50px;
+
+background:#161f36;
+
+color:white;
+
+text-decoration:none;
+
+font-weight:bold;
+
+transition:.35s;
+
+}
+
+.social:hover{
+
+background:#8b5cf6;
+
+transform:translateY(-5px);
+
+}
+
+/* ---------------- FOOTER ---------------- */
+
+footer{
+
+padding:40px;
+
+text-align:center;
+
+color:#94a3b8;
+
+background:#050811;
+
+}
+
+/* ---------------- MOBILE ---------------- */
+
+@media(max-width:950px){
+
+header{
+
+flex-direction:column;
+
+padding:20px;
+
+}
+
+.logo img{
+
+height:75px;
+
+}
+
+nav{
+
+gap:25px;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+.intro h1{
+
+font-size:50px;
+
+}
+
+.release{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<a href="index.html" class="logo">
+<img src="signature.png" alt="Joel Engelman">
+</a>
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="music.html">Music</a>
+
+<a href="about.html">About</a>
+
+<a href="contact.html">Contact</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<img src="https://joelengelman.github.io/ChatGPT%20Image%20Jul%2027,%202026,%2008_36_12%20AM.png" alt="Joel Engelman">
+
+</section>
+
+<section class="intro">
+
+<h1>Joel <span class="highlight">Engelman</span></h1>
+
+<p>
+
+Joel Engelman is a passionate singer, songwriter, rapper and producer. Despite growing up with a stutter, Joel never let it stop him from pursuing the dream of creating music.
+
+</p>
+
+<p>
+
+Born in Australia and raised in Fiji, Joel has been surrounded by music, creativity and inspiration from a young age. Today he writes, records, produces and performs his own music while continually expanding his skills as both an artist and creator.
+
+</p>
+
+<div class="buttons">
+
+<a href="music.html" class="button">🎵 Explore Music</a>
+
+<a href="about.html" class="button button2">👤 About Joel</a>
+
+</div>
+
+</section>
+
+<section class="features">
+
+<div class="feature">
+
+<h2>🎤 Artist</h2>
+
+<p>
+
+Original music blending rap, melodic vocals and storytelling into a unique style.
+
+</p>
+
+</div>
+
+<div class="feature">
+
+<h2>🎹 Musician</h2>
+
+<p>
+
+Piano, drums, DJing, songwriting and music production all contribute to Joel's creative process.
+
+</p>
+
+</div>
+
+<div class="feature">
+
+<h2>💻 Creator</h2>
+
+<p>
+
+Outside music, Joel enjoys designing, programming and building projects—including this website.
+
+</p>
+
+</div>
+
+</section>
+<section class="release">
+
+<div class="release-text">
+
+<h2>Latest <span class="highlight">Release</span></h2>
+
+<p>
+
+Music has always been more than just a hobby for Joel—it's a way of expressing emotion, telling stories and overcoming challenges.
+
+Every project is written, recorded and produced with the goal of creating something memorable.
+
+</p>
+
+<p>
+
+Keep an eye out for upcoming releases, collaborations and new projects coming soon.
+
+</p>
+
+<a href="music.html" class="button">View Music</a>
+
+</div>
+
+<div class="release-card">
+
+<img src="https://joelengelman.github.io/ChatGPT%20Image%20Jul%2027,%202026,%2008_36_12%20AM.png" alt="Joel Engelman">
+
+<h3>Came &amp; Go</h3>
+
+<p>
+
+An upcoming project combining hip-hop, melodic rap and modern production.
+
+</p>
+
+</div>
+
+</section>
+
+<section class="socials">
+
+<div class="container">
+
+<h2>Follow Joel</h2>
+
+<p>
+
+New music, announcements and exclusive content coming soon.
+
+</p>
+
+<div class="social-grid">
+
+<a href="#" class="social">🎵 Spotify</a>
+
+<a href="#" class="social">▶ YouTube</a>
+
+<a href="#" class="social">📸 Instagram</a>
+
+<a href="#" class="social">🎧 SoundCloud</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section style="padding:100px 0;">
+
+<div class="container">
+
+<h1 style="text-align:center;font-size:58px;margin-bottom:70px;">
+
+Quick Stats
+
+</h1>
+
+<div class="features">
+
+<div class="feature">
+
+<h2>🎼 Songwriting</h2>
+
+<p>
+
+Creating original lyrics and melodies inspired by personal experiences and the world around him.
+
+</p>
+
+</div>
+
+<div class="feature">
+
+<h2>🥁 Instruments</h2>
+
+<p>
+
+Piano, drums, DJing, vocals and music production continue to shape Joel's unique style.
+
+</p>
+
+</div>
+
+<div class="feature">
+
+<h2>💻 Beyond Music</h2>
+
+<p>
+
+Programming, graphic design and creative projects all play a role in bringing Joel's ideas to life—including this website.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p style="font-size:18px;">
+
+© 2026 Joel Engelman • All Rights Reserved
+
+</p>
+
+<p style="margin-top:12px;color:#64748b;">
+
+Designed & coded by Joel Engelman
+
+</p>
+
+</footer>
+
+</body>
+
+</html>
