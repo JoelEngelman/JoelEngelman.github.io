@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Joel Engelman</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* ---------------- HEADER ---------------- */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(15,23,42,.92);
+    backdrop-filter:blur(14px);
+    z-index:1000;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.logo img{
+    height:52px;
+    transition:.35s;
+}
+
+.logo img:hover{
+    transform:scale(1.05);
+}
+
+nav{
+    display:flex;
+    gap:35px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:bold;
+    position:relative;
+    transition:.3s;
+}
+
+nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0%;
+    height:2px;
+    background:#8b5cf6;
+    transition:.35s;
+}
+
+nav a:hover{
+    color:#8b5cf6;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+/* ---------------- HERO ---------------- */
+
+.hero{
+
+    margin-top:88px;
+    width:100%;
+
+}
+
+.hero img{
+
+    width:100%;
+    display:block;
+
+}
+
+/* ---------------- CONTENT ---------------- */
+
+.container{
+
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+
+}
+
+.about{
+
+    padding:90px 0;
+
+}
+
+.about h1{
+
+    font-size:60px;
+    margin-bottom:35px;
+
+}
+
+.about p{
+
+    font-size:20px;
+    line-height:1.9;
+    color:#d1d5db;
+    margin-bottom:25px;
+
+}
+
+.highlight{
+
+    color:#8b5cf6;
+}
+
+/* ---------------- CARDS ---------------- */
+
+.cards{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:35px;
+
+    padding-bottom:90px;
+
+}
+
+.card{
+
+    background:#172036;
+    border-radius:18px;
+    padding:40px;
+    transition:.35s;
+    border:1px solid rgba(255,255,255,.05);
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 25px 60px rgba(139,92,246,.25);
+
+}
+
+.card h2{
+
+    margin-bottom:20px;
+    font-size:32px;
+
+}
+
+.card p{
+
+    color:#cbd5e1;
+    line-height:1.8;
+
+}
+
+.button{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    padding:14px 28px;
+
+    border-radius:40px;
+
+    background:#8b5cf6;
+
+    color:white;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.button:hover{
+
+    background:#6d28d9;
+
+    transform:translateY(-3px);
+
+}
+
+/* ---------------- SOCIALS ---------------- */
+
+.socials{
+
+    text-align:center;
+
+    padding:100px 0;
+
+}
+
+.socials h2{
+
+    font-size:48px;
+
+    margin-bottom:40px;
+
+}
+
+.social-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:25px;
+
+}
+
+.social-buttons a{
+
+    text-decoration:none;
+
+    color:white;
+
+    background:#1e293b;
+
+    padding:18px 32px;
+
+    border-radius:50px;
+
+    transition:.3s;
+
+    font-weight:bold;
+
+}
+
+.social-buttons a:hover{
+
+    background:#8b5cf6;
+
+    transform:translateY(-4px);
+
+}
+
+footer{
+
+    background:#0b1120;
+
+    padding:35px;
+
+    text-align:center;
+
+    color:#94a3b8;
+
+}
+
+/* -------- MOBILE -------- */
+
+@media(max-width:900px){
+
+header{
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+nav{
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+}
+
+.about h1{
+
+    font-size:44px;
+
+}
+
+.about p{
+
+    font-size:18px;
+
+}
+
+.socials h2{
+
+    font-size:36px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<a href="index.html" class="logo">
+    <img src="5869fc66-e753-47f8-b198-4dacc66b4263.png" alt="Joel Engelman">
+</a>
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="music.html">Music</a>
+
+<a href="about.html">About</a>
+
+<a href="contact.html">Contact</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<img src="https://joelengelman.github.io/ChatGPT%20Image%20Jul%2027,%202026,%2008_36_12%20AM.png" alt="Joel Engelman">
+
+</section>
+
+<section class="about">
+
+<div class="container">
+
+<h1>Joel <span class="highlight">Engelman</span></h1>
+
+<p>
+Joel Engelman is a passionate singer, songwriter, rapper, and producer. At a young age, Joel found out he had a stutter, which made it very hard and difficult to sing. Unlike many people who stutter, Joel found that singing wasn't always easier—in some cases he would stutter even more—but that never stopped him from chasing his dream of making music.
+</p>
+
+<p>
+Joel was born in Australia and raised in Fiji. Growing up around music and the arts, he developed a passion for creativity from an early age. His father enjoyed DJing and playing musical instruments, while his mother is an accomplished artist.
+</p>
+<p>
+Inspired by the people around him from a very young age, Joel continued developing his musical abilities. Today he plays the piano, the drums, DJs, sings, writes songs, produces music, and even coded this very website from scratch.
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<h1 style="text-align:center;">Latest Release</h1>
+
+<div class="cards">
+
+<div class="card">
+
+<h2>Came &amp; Go</h2>
+
+<p>
+
+Joel's latest project blends rap, hip-hop, melodic vocals and storytelling into a unique sound inspired by artists across multiple genres.
+
+</p>
+
+<a href="music.html" class="button">Listen Now</a>
+
+</div>
+
+<div class="card">
+
+<h2>Music</h2>
+
+<p>
+
+Explore Joel's songs, albums, upcoming releases, behind-the-scenes projects and everything currently in development.
+
+</p>
+
+<a href="music.html" class="button">View Music</a>
+
+</div>
+
+<div class="card">
+
+<h2>About Joel</h2>
+
+<p>
+
+Learn more about Joel's journey into music, his inspirations, the instruments he plays, and what drives his passion for creating music.
+
+</p>
+
+<a href="about.html" class="button">Read More</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="socials">
+
+<div class="container">
+
+<h2>Listen Everywhere</h2>
+
+<p style="margin-bottom:40px;color:#cbd5e1;font-size:20px;">
+
+More platforms coming soon.
+
+</p>
+
+<div class="social-buttons">
+
+<a href="#">Spotify</a>
+
+<a href="#">Apple Music</a>
+
+<a href="#">YouTube</a>
+
+<a href="#">SoundCloud</a>
+
+<a href="#">Instagram</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+
+© 2026 Joel Engelman • All Rights Reserved
+
+</p>
+
+</footer>
+
+</body>
+
+</html>
