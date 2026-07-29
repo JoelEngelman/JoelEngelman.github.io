@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Music | Joel Engelman</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#080b16;
+color:white;
+overflow-x:hidden;
+}
+
+/* ================= HEADER ================= */
+
+header{
+
+position:fixed;
+top:0;
+left:0;
+
+width:100%;
+
+padding:18px 7%;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+background:rgba(8,11,22,.92);
+
+backdrop-filter:blur(18px);
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+z-index:9999;
+
+}
+
+.logo img{
+
+height:105px;
+display:block;
+transition:.35s;
+
+}
+
+.logo img:hover{
+
+transform:scale(1.05);
+
+}
+
+nav{
+
+display:flex;
+gap:42px;
+
+}
+
+nav a{
+
+color:white;
+text-decoration:none;
+font-size:18px;
+font-weight:bold;
+transition:.3s;
+position:relative;
+
+}
+
+nav a::after{
+
+content:"";
+position:absolute;
+
+left:0;
+bottom:-8px;
+
+height:2px;
+width:0;
+
+background:#8b5cf6;
+
+transition:.35s;
+
+}
+
+nav a:hover{
+
+color:#8b5cf6;
+
+}
+
+nav a:hover::after{
+
+width:100%;
+
+}
+
+/* ================= HERO ================= */
+
+.hero{
+
+margin-top:120px;
+
+padding:120px 20px;
+
+text-align:center;
+
+background:linear-gradient(180deg,#111827,#080b16);
+
+}
+
+.hero h1{
+
+font-size:82px;
+
+margin-bottom:20px;
+
+}
+
+.hero p{
+
+font-size:22px;
+
+color:#cbd5e1;
+
+max-width:800px;
+
+margin:auto;
+
+line-height:1.8;
+
+}
+
+.highlight{
+
+color:#8b5cf6;
+
+}
+
+/* ================= CONTAINER ================= */
+
+.container{
+
+width:90%;
+max-width:1200px;
+
+margin:auto;
+
+}
+
+/* ================= FEATURED ================= */
+
+.featured{
+
+padding:90px 0;
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:60px;
+
+align-items:center;
+
+}
+
+.album{
+
+background:#121a2d;
+
+padding:25px;
+
+border-radius:24px;
+
+transition:.35s;
+
+}
+
+.album:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 20px 60px rgba(139,92,246,.25);
+
+}
+
+.album img{
+
+width:100%;
+
+border-radius:18px;
+
+display:block;
+
+}
+
+.album-info h2{
+
+font-size:56px;
+
+margin-bottom:25px;
+
+}
+
+.album-info h3{
+
+font-size:28px;
+
+margin-bottom:20px;
+
+color:#8b5cf6;
+
+}
+
+.album-info p{
+
+font-size:20px;
+
+line-height:1.9;
+
+color:#cbd5e1;
+
+margin-bottom:30px;
+
+}
+
+.button{
+
+display:inline-block;
+
+padding:18px 36px;
+
+background:#8b5cf6;
+
+color:white;
+
+text-decoration:none;
+
+border-radius:50px;
+
+font-weight:bold;
+
+transition:.35s;
+
+}
+
+.button:hover{
+
+background:#6d28d9;
+
+transform:translateY(-5px);
+
+}
+
+/* ================= SONG CARDS ================= */
+
+.section-title{
+
+text-align:center;
+
+font-size:58px;
+
+margin:80px 0 50px;
+
+}
+
+.song-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:35px;
+
+padding-bottom:80px;
+
+}
+
+.song{
+
+background:#121a2d;
+
+border-radius:22px;
+
+overflow:hidden;
+
+transition:.35s;
+
+}
+
+.song:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 20px 60px rgba(139,92,246,.25);
+
+}
+
+.song img{
+
+width:100%;
+
+display:block;
+
+}
+
+.song-content{
+
+padding:25px;
+
+}
+
+.song-content h3{
+
+font-size:28px;
+
+margin-bottom:15px;
+
+}
+
+.song-content p{
+
+color:#cbd5e1;
+
+line-height:1.8;
+
+}
+/* ================= STREAMING ================= */
+
+.streaming{
+
+padding:90px 0;
+
+text-align:center;
+
+}
+
+.streaming h2{
+
+font-size:56px;
+
+margin-bottom:20px;
+
+}
+
+.streaming p{
+
+font-size:20px;
+
+color:#cbd5e1;
+
+margin-bottom:40px;
+
+}
+
+.platforms{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+.platform{
+
+background:#121a2d;
+
+padding:18px 35px;
+
+border-radius:50px;
+
+text-decoration:none;
+
+color:white;
+
+font-weight:bold;
+
+transition:.35s;
+
+border:1px solid rgba(255,255,255,.05);
+
+}
+
+.platform:hover{
+
+background:#8b5cf6;
+
+transform:translateY(-5px);
+
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+
+background:#050811;
+
+padding:40px;
+
+text-align:center;
+
+color:#94a3b8;
+
+margin-top:80px;
+
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+header{
+
+flex-direction:column;
+
+padding:20px;
+
+}
+
+.logo img{
+
+height:80px;
+
+}
+
+nav{
+
+gap:22px;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+margin-top:20px;
+
+}
+
+.hero{
+
+padding:90px 20px;
+
+}
+
+.hero h1{
+
+font-size:58px;
+
+}
+
+.featured{
+
+grid-template-columns:1fr;
+
+}
+
+.album-info{
+
+text-align:center;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<a href="index.html" class="logo">
+
+<img src="signature.png" alt="Joel Engelman">
+
+</a>
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="music.html">Music</a>
+
+<a href="about.html">About</a>
+
+<a href="contact.html">Contact</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1><span class="highlight">Music</span></h1>
+
+<p>
+
+Discover Joel Engelman's latest music, upcoming releases, and creative projects.
+
+</p>
+
+</section>
+
+<div class="container">
+
+<section class="featured">
+
+<div class="album">
+
+<img src="https://joelengelman.github.io/ChatGPT%20Image%20Jul%2027,%202026,%2008_36_12%20AM.png" alt="Came & Go">
+
+</div>
+
+<div class="album-info">
+
+<h2>Came &amp; Go</h2>
+
+<h3>Upcoming Release</h3>
+
+<p>
+
+"Came &amp; Go" is an upcoming project featuring rap, melodic vocals, storytelling and modern production. Every song is written to share real experiences while blending emotion with energetic beats.
+
+</p>
+
+<a href="#" class="button">Coming Soon</a>
+
+</div>
+
+</section>
+
+<h2 class="section-title">
+
+Upcoming Music
+
+</h2>
+
+<section class="song-grid">
+
+<div class="song">
+
+<img src="https://picsum.photos/600/600?random=1">
+
+<div class="song-content">
+
+<h3>Came &amp; Go</h3>
+
+<p>
+
+Upcoming Single
+
+</p>
+
+</div>
+
+</div>
+
+<div class="song">
+
+<img src="https://picsum.photos/600/600?random=2">
+
+<div class="song-content">
+
+<h3>Untitled</h3>
+
+<p>
+
+Coming Soon
+
+</p>
+
+</div>
+
+</div>
+
+<div class="song">
+
+<img src="https://picsum.photos/600/600?random=3">
+
+<div class="song-content">
+
+<h3>Future Project</h3>
+
+<p>
+
+More music on the way.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="streaming">
+
+<h2>Listen Everywhere</h2>
+
+<p>
+
+Streaming links will appear here as music is released.
+
+</p>
+
+<div class="platforms">
+
+<a href="#" class="platform">🎵 Spotify</a>
+
+<a href="#" class="platform">🍎 Apple Music</a>
+
+<a href="#" class="platform">▶ YouTube</a>
+
+<a href="#" class="platform">🎧 SoundCloud</a>
+
+<a href="#" class="platform">📸 Instagram</a>
+
+</div>
+
+</section>
+
+</div>
+
+<footer>
+
+<h3 style="margin-bottom:12px;font-size:28px;">
+
+Joel Engelman
+
+</h3>
+
+<p>
+
+Singer • Songwriter • Rapper • Producer
+
+</p>
+
+<br>
+
+<p>
+
+© 2026 Joel Engelman • All Rights Reserved
+
+</p>
+
+<p style="margin-top:10px;color:#64748b;">
+
+Designed &amp; coded by Joel Engelman
+
+</p>
+
+</footer>
+  <section style="padding:100px 0;background:#0d1425;">
+
+<div class="container">
+
+<h2 class="section-title" style="margin-top:0;">
+
+Skills & Creative Process
+
+</h2>
+
+<div class="song-grid">
+
+<div class="song">
+
+<div class="song-content">
+
+<h3>🎤 Vocals</h3>
+
+<p>
+
+Every song begins with an idea, a melody or a story. Joel develops vocals to match the emotion behind each track.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="song">
+
+<div class="song-content">
+
+<h3>🎼 Songwriting</h3>
+
+<p>
+
+Lyrics are written from personal experiences, creating songs that are honest, emotional and memorable.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="song">
+
+<div class="song-content">
+
+<h3>🎧 Production</h3>
+
+<p>
+
+Recording, arranging and producing every project while experimenting with new sounds and techniques.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section style="padding:100px 0;">
+
+<div class="container">
+
+<h2 class="section-title" style="margin-top:0;">
+
+Coming Soon
+
+</h2>
+
+<div class="stats">
+
+<div class="stat">
+
+<h2>🎵</h2>
+
+<p>
+
+New Singles
+
+</p>
+
+</div>
+
+<div class="stat">
+
+<h2>💿</h2>
+
+<p>
+
+Albums
+
+</p>
+
+</div>
+
+<div class="stat">
+
+<h2>🎬</h2>
+
+<p>
+
+Music Videos
+
+</p>
+
+</div>
+
+<div class="stat">
+
+<h2>🤝</h2>
+
+<p>
+
+Collaborations
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="socials">
+
+<div class="container">
+
+<h2>Stay Connected</h2>
+
+<p>
+
+Follow Joel for music updates, behind-the-scenes content and future releases.
+
+</p>
+
+<div class="social-buttons">
+
+<a href="#">🎵 Spotify</a>
+
+<a href="#">▶ YouTube</a>
+
+<a href="#">📸 Instagram</a>
+
+<a href="#">🎧 SoundCloud</a>
+
+<a href="#">🍎 Apple Music</a>
+
+</div>
+
+</div>
+
+</section>
+
+</body>
+
+</html>
