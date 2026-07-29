@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact | Joel Engelman</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#080b16;
+color:white;
+overflow-x:hidden;
+}
+
+/* ===== HEADER ===== */
+
+header{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+
+padding:18px 7%;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+background:rgba(8,11,22,.92);
+
+backdrop-filter:blur(18px);
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+z-index:9999;
+
+}
+
+.logo img{
+
+height:105px;
+
+}
+
+nav{
+
+display:flex;
+gap:40px;
+
+}
+
+nav a{
+
+color:white;
+text-decoration:none;
+font-size:18px;
+font-weight:bold;
+transition:.3s;
+position:relative;
+
+}
+
+nav a::after{
+
+content:"";
+position:absolute;
+
+left:0;
+bottom:-8px;
+
+width:0;
+height:2px;
+
+background:#8b5cf6;
+
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#8b5cf6;
+
+}
+
+nav a:hover::after{
+
+width:100%;
+
+}
+
+/* ===== HERO ===== */
+
+.hero{
+
+margin-top:120px;
+
+padding:120px 20px;
+
+text-align:center;
+
+background:linear-gradient(180deg,#111827,#080b16);
+
+}
+
+.hero h1{
+
+font-size:82px;
+
+margin-bottom:20px;
+
+}
+
+.hero p{
+
+font-size:22px;
+
+color:#cbd5e1;
+
+max-width:800px;
+
+margin:auto;
+
+line-height:1.8;
+
+}
+
+.highlight{
+
+color:#8b5cf6;
+
+}
+
+/* ===== CONTENT ===== */
+
+.container{
+
+width:90%;
+max-width:1200px;
+margin:auto;
+
+}
+
+.contact{
+
+padding:90px 0;
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:40px;
+
+}
+
+.card{
+
+background:#121a2d;
+
+padding:40px;
+
+border-radius:22px;
+
+border:1px solid rgba(255,255,255,.05);
+
+transition:.35s;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 20px 60px rgba(139,92,246,.25);
+
+}
+
+.card h2{
+
+font-size:38px;
+
+margin-bottom:20px;
+
+}
+
+.card p{
+
+font-size:19px;
+
+line-height:1.9;
+
+color:#d1d5db;
+
+margin-bottom:20px;
+
+}
+
+.info{
+
+font-size:20px;
+
+margin:18px 0;
+
+}
+
+.info strong{
+
+color:#8b5cf6;
+
+}
+
+.sorry{
+
+margin-top:30px;
+
+padding:25px;
+
+background:#1a2440;
+
+border-left:5px solid #8b5cf6;
+
+border-radius:15px;
+
+}
+
+.sorry h3{
+
+font-size:28px;
+
+margin-bottom:15px;
+
+}
+
+.sorry p{
+
+margin-bottom:0;
+
+color:#d1d5db;
+
+}
+
+/* ===== FORM ===== */
+
+form{
+
+display:flex;
+
+flex-direction:column;
+
+}
+
+input,
+textarea{
+
+background:#1b2742;
+
+border:none;
+
+border-radius:12px;
+
+padding:18px;
+
+margin-bottom:18px;
+
+color:white;
+
+font-size:17px;
+
+}
+
+textarea{
+
+height:180px;
+
+resize:none;
+
+}
+
+button{
+
+background:#8b5cf6;
+
+color:white;
+
+border:none;
+
+padding:18px;
+
+border-radius:50px;
+
+font-size:18px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+transition:.35s;
+
+}
+
+button:hover{
+
+background:#6d28d9;
+
+transform:translateY(-4px);
+
+}
+/* ================= FOOTER ================= */
+
+footer{
+
+background:#050811;
+
+padding:40px;
+
+text-align:center;
+
+color:#94a3b8;
+
+margin-top:80px;
+
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+header{
+
+flex-direction:column;
+
+padding:20px;
+
+}
+
+.logo img{
+
+height:80px;
+
+}
+
+nav{
+
+gap:22px;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+margin-top:20px;
+
+}
+
+.hero{
+
+padding:90px 20px;
+
+}
+
+.hero h1{
+
+font-size:58px;
+
+}
+
+.contact{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<a href="index.html" class="logo">
+
+<img src="signature.png" alt="Joel Engelman">
+
+</a>
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="music.html">Music</a>
+
+<a href="about.html">About</a>
+
+<a href="contact.html">Contact</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>Get In <span class="highlight">Touch</span></h1>
+
+<p>
+
+Have a question, collaboration idea, or just want to say hello? I'd love to hear from you!
+
+</p>
+
+</section>
+
+<div class="container">
+
+<section class="contact">
+
+<div class="card">
+
+<h2>Contact Information</h2>
+
+<p>
+
+The best way to contact me is through email or WhatsApp. I do my best to read every message.
+
+</p>
+
+<div class="info">
+
+<strong>📧 Email</strong><br>
+
+<a href="mailto:joeldavidengelman@hotmail.com" style="color:#ffffff;text-decoration:none;">
+joeldavidengelman@hotmail.com
+</a>
+
+</div>
+
+<div class="info">
+
+<strong>💬 WhatsApp</strong><br>
+
+<a href="https://wa.me/" style="color:#ffffff;text-decoration:none;">
+@TheRealJoelEngelman
+</a>
+
+</div>
+
+<div class="sorry">
+
+<h3>Sorry! 👋</h3>
+
+<p>
+
+For privacy and safety reasons, I don't publicly share my personal phone number on my website. I really appreciate your understanding. 😊
+
+</p>
+
+<p style="margin-top:18px;">
+
+You can still contact me anytime through my email or by searching my WhatsApp username:
+
+<br><br>
+
+<strong>@TheRealJoelEngelman</strong>
+
+</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Send a Message</h2>
+
+<form>
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Your Email">
+
+<input type="text" placeholder="Subject">
+
+<textarea placeholder="Your Message"></textarea>
+
+<button type="submit">
+
+Send Message
+
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+</div>
+
+<footer>
+
+<h3 style="margin-bottom:15px;font-size:28px;">
+
+Joel Engelman
+
+</h3>
+
+<p>
+
+Singer • Songwriter • Rapper • Producer
+
+</p>
+
+<br>
+
+<p>
+
+© 2026 Joel Engelman • All Rights Reserved
+
+</p>
+
+<p style="margin-top:10px;color:#64748b;">
+
+Designed &amp; coded by Joel Engelman
+
+</p>
+<section style="padding:90px 0;background:#0d1425;">
+
+<div class="container">
+
+<h2 style="
+text-align:center;
+font-size:58px;
+margin-bottom:25px;
+">
+
+Frequently Asked Questions
+
+</h2>
+
+<p style="
+text-align:center;
+color:#cbd5e1;
+font-size:20px;
+margin-bottom:60px;
+">
+
+Here are a few common questions people ask.
+
+</p>
+
+<div style="
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
+">
+
+<div class="card">
+
+<h2>🎵 Can we collaborate?</h2>
+
+<p>
+
+Absolutely! If you have an idea for a song, project or collaboration, send me a message through the contact form or by email.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>🎤 Can I use your music?</h2>
+
+<p>
+
+Please contact me first. Depending on how you'd like to use it, I'd be happy to discuss permission.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>📬 How long do replies take?</h2>
+
+<p>
+
+I try to respond as quickly as possible, although response times may vary depending on school, music projects and other commitments.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section style="padding:100px 0;">
+
+<div class="container">
+
+<div class="card" style="text-align:center;">
+
+<h2 style="font-size:52px;">
+
+Thanks for visiting!
+
+</h2>
+
+<p style="max-width:750px;margin:30px auto;">
+
+Whether you've listened to my music, explored my website, or just stopped by to say hello, thank you for your support. Every visit means a lot and motivates me to keep creating.
+
+</p>
+
+<a href="index.html" class="button">
+
+🏠 Back to Home
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+</footer>
+
+</body>
+
+</html>
